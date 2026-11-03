@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+footer {
+  width: 100%;
+  height: 100%;
+  direction: rtl;
+  border-top: 1px solid #f7f7f8;
+  background-color: #ffffff;
+  margin-top: 30px;
+  font-family: var(--font-family);
+  color: #6b747a !important;
+  .footer-center {
+    
+    margin: 0 auto;
+    .footer-top {
+      margin-right: 30px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      .footer-text {
+        position: relative;
+        width: 1176px;
+        height: 216px;
+        text-align: right;
+        .footer-text-content {
+          position: relative;
+          overflow: hidden;
+          max-height: 150px;
+
+          h3 {
+            font-size: 20px;
+            font-family: var(--font-family);
+            color: #707c8bed !important;
+            margin-bottom: 15px;
+          }
+          p {
+            position: relative;
+            font-size: 13px;
+            color: #707c8b;
+            line-height: 2;
+            font-family: var(--font-family);
+            margin-top: 15px;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 60px;
+              color: #707c8b;
+              background: linear-gradient(to bottom, transparent, white);
+              pointer-events: none;
+            }
+          }
+        }
+        a {
+          font-size: 15px;
+          display: block;
+          position: relative;
+          z-index: 2;
+          text-decoration: none;
+          color: #1d72dd;
+          margin-top: 20px;
+          font-family: var(--font-family);
+        }
+      }
+    }
+    .footer-certificates {
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border: 1px solid lightgrey;
+        border-radius: 8px;
+        padding: 8px;
+      }
+    }
+    .footer-middle {
+      border-top: 1px solid lightgrey;
+      padding: 25px;
+      text-align: center;
+      font-family: var(--font-family);
+      font-size: 11px;
+      color: #6b747a;
+    }
+    .footer-brands{
+      width: 100%;
+      display: grid!important;
+      grid-template-columns: repeat(9,1fr);
+      background-color: #F0F0F1;
+      direction: ltr;
+      .brand{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #E0E0E2;
+        img{
+          
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

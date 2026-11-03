@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  background: #fff;
+  direction: rtl;
+}
+
+/* هدر */
+.header {
+  height: 65px;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-link {
+  color: #424750;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 15px;
+}
+
+/* منوی شناور */
+.mega-menu {
+  width: 850px;
+  height: 430px;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  display: none;
+  flex-direction: row;
+
+  background: #fff;
+  border: 1px solid #e0e0e2;
+  border-radius: 0 0 8px 8px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.nav-item:hover .mega-menu {
+  display: flex;
+}
+
+/* ستون دسته بندی سمت راست */
+.category-list {
+  width: 190px;
+  min-width: 190px;
+  height: 100%;
+
+  background: #f5f5f5;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* جهت اسکرول بار */
+  direction: ltr;
+
+  border-left: 1px solid #eee;
+
+  scrollbar-width: thin;
+  scrollbar-color: #d0d0d0 transparent;
+}
+
+/* ظاهر آیتم ها */
+.category-item {
+  direction: rtl;
+  width: 100%;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 43px;
+
+  padding: 0 15px;
+
+  font-size: 12px;
+  color: #424750;
+  text-decoration: none;
+  text-align: right;
+
+  transition: 0.15s;
+}
+
+.category-item:hover .category-link {
+  background: #fff;
+  color: #ef394e;
+}
+
+/* پنل سمت چپ */
+.panels {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  position: relative;
+  background: #fff;
+}
+
+/* پنل های محتوا */
+.content-panel {
+  position: absolute;
+  inset: 0;
+
+  display: none;
+
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* اسکرول بار سمت راست پنل سفید */
+  direction: ltr;
+
+  scrollbar-width: thin;
+  scrollbar-color: #d0d0d0 transparent;
+}
+
+/* نمایش پنل اول به صورت پیش فرض */
+.mega-menu:not(:has(.category-item:hover)) .content-panel:first-child {
+  display: block;
+}
+
+/* نمایش پنل مربوط به هر دسته */
+.mega-menu:has(.category-item:nth-child(1):hover) .content-panel:nth-child(1) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(2):hover) .content-panel:nth-child(2) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(3):hover) .content-panel:nth-child(3) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(4):hover) .content-panel:nth-child(4) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(5):hover) .content-panel:nth-child(5) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(6):hover) .content-panel:nth-child(6) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(7):hover) .content-panel:nth-child(7) {
+  display: block;
+}
+
+.mega-menu:has(.category-item:nth-child(8):hover) .content-panel:nth-child(8) {
+  display: block;
+}
+
+/* محتوای داخلی پنل */
+.panel-content {
+  direction: rtl;
+  text-align: right;
+
+  padding: 24px;
+}
+
+.panel-content > h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3f4064;
+
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+/* ستون های لینک */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  direction: rtl;
+}
+
+.columns > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 14px;
+  min-width: 0;
+}
+
+.columns h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3f4064;
+
+  margin-bottom: 5px;
+}
+
+.columns h4::before {
+  content: "";
+
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+
+  background: #ef394e;
+  margin-left: 7px;
+
+  vertical-align: middle;
+}
+
+.columns a {
+  font-size: 12px;
+  color: #81858b;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: 0.15s;
+}
+
+.columns a:hover {
+  color: #ef394e;
+}
+
+/* اسکرول بار Chrome */
+.category-list::-webkit-scrollbar,
+.content-panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.category-list::-webkit-scrollbar-track,
+.content-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category-list::-webkit-scrollbar-thumb,
+.content-panel::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 10px;
+}
+
+.category-list::-webkit-scrollbar-thumb:hover,
+.content-panel::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}

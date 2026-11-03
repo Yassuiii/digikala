@@ -1,0 +1,29 @@
+.amazing-top {
+  width: 100%;
+  margin-bottom: 30px;
+  .amazing-top-center {
+    max-width: 1650px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .background {
+      width: 616px;
+      height: 100%;
+      position: relative;
+      margin: 0 auto;
+      
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
